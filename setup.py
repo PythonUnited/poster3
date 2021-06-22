@@ -1,8 +1,10 @@
 from setuptools import setup, find_packages
 import poster
+import sys
 
 version = ".".join(str(x) for x in poster.version)
 
+sys.dont_write_bytecode = True
 setup(name='poster',
       version=version,
       description="Streaming HTTP uploads and multipart/form-data encoding",
